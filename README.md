@@ -1,0 +1,1 @@
+This is my non-portfolio-rather-boring cv website. Very overkillingly one-pages made with Nextjs.
