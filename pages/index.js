@@ -13,9 +13,28 @@ export default function Home() {
       <Head>
         <title>Jonathan Lurie</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="I build scientific software, mostly for computing things about brains, triangles and pixels."/>
+        <meta name="author" content="Jonathan Lurie"/>
+        <meta property="og:title" content="Jonathan Lurie"/>
+        <meta property="og:url" content="https://jonathanlurie.fr"/>
+        <meta property="og:image" content="https://jonathanlurie.fr/myface.png"/>
+        <meta property="og:description" content="I build scientific software, mostly for computing things about brains, triangles and pixels."/>
+        <meta property="og:site_name" content="Jonathan Lurie"/>
+        <meta property="og:type" content="profile"/>
+        <meta name="twitter:title" content="Jonathan Lurie"/>
+        <meta name="twitter:description" content="I build scientific software, mostly for computing things about brains, triangles and pixels."/>
+        <meta name="twitter:image" content="https://jonathanlurie.fr/myface.png"/>
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:site" content="@jonathanlurie"/>
+        <meta name="next-head-count" content="17"/>
+
       </Head>
 
       <div className={Styles['header']}>
+
+        <div className={Styles['my-face']}>
+          <img src="/images/myface.jpg" alt='This is Jonathan Lurie profile picture'/>
+        </div>
         
         <div className={Styles['presentation']}>
           <span className={Styles['hey']} >
@@ -24,9 +43,7 @@ export default function Home() {
           <span className={Styles['my-name-is']}> my name is </span><span className={Styles['my-name']}> Jonathan Lurie.</span>
         </div>
 
-        <div className={Styles['my-face']}>
-          <img src="/images/myface.jpg" />
-        </div>
+        
 
       </div>
 
