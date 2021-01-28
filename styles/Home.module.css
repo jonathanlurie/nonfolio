@@ -108,3 +108,14 @@
 .career a:hover {
   color: #ffa2d1;
 }
+
+.photo-link {
+  font-size: 0.65em;
+  line-height: 0.0em;
+  white-space: nowrap;
+  color: #c079ff;
+}
+
+.photo-link a:hover {
+  color: #57c5d8;
+}
