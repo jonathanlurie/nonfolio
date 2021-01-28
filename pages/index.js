@@ -13,6 +13,7 @@ export default function Home() {
       <Head>
         <title>Jonathan Lurie</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="theme-color" content="#4c4c4c"></meta>
         <meta name="description" content="I build scientific software, mostly for computing things about brains, triangles and pixels."/>
         <meta name="author" content="Jonathan Lurie"/>
         <meta property="og:title" content="Jonathan Lurie"/>
