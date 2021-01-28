@@ -4,6 +4,7 @@
   height: calc(100vh - 20px);
   background: white;
   position: relative;
+  overflow: scroll;
 }
 
 
