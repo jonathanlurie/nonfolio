@@ -18,13 +18,13 @@ export default function Home() {
         <meta name="author" content="Jonathan Lurie"/>
         <meta property="og:title" content="Jonathan Lurie"/>
         <meta property="og:url" content="https://jonathanlurie.fr"/>
-        <meta property="og:image" content="https://jonathanlurie.fr/myface.png"/>
+        <meta property="og:image" content="https://jonathanlurie.fr/images/myface_mountain.jpg"/>
         <meta property="og:description" content="I build scientific software, mostly for computing things about brains, triangles and pixels."/>
         <meta property="og:site_name" content="Jonathan Lurie"/>
         <meta property="og:type" content="profile"/>
         <meta name="twitter:title" content="Jonathan Lurie"/>
         <meta name="twitter:description" content="I build scientific software, mostly for computing things about brains, triangles and pixels."/>
-        <meta name="twitter:image" content="https://jonathanlurie.fr/myface.png"/>
+        <meta name="twitter:image" content="https://jonathanlurie.fr/images/myface_mountain.jpg"/>
         <meta name="twitter:card" content="summary_large_image"/>
         <meta name="twitter:site" content="@jonathanlurie"/>
         <meta name="next-head-count" content="17"/>
