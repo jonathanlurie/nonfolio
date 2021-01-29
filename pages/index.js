@@ -1,9 +1,9 @@
 import Head from 'next/head'
-import { Row, Col, Divider, Space } from 'antd'
+import { Tooltip, Space } from 'antd'
 import {
-  StarFilled,
   TwitterCircleFilled,
   GithubFilled,
+  SmileFilled,
 } from '@ant-design/icons'
 import Styles from '../styles/Home.module.css'
 
@@ -60,6 +60,12 @@ export default function Home() {
           <a href='https://github.com/jonathanlurie'>
             <GithubFilled/>
           </a>
+          <a href='#'>
+            <Tooltip placement='right' color='#5ddaef' title={<span className={Styles['courier-label']}>lurie.jo 📮 gmail com</span>}>
+              <SmileFilled />
+            </Tooltip>
+          </a>
+          
         </Space>
       </div>
 
