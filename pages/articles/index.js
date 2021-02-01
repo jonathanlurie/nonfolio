@@ -2,7 +2,8 @@
 import { promises as fs } from 'fs'
 import path from 'path'
 import yaml from 'js-yaml'
-import matter from 'gray-matter'
+import { getArticle } from '../../core/data'
+// import matter from 'gray-matter'
 // import Marked from 'marked'
 // import DOMPurify from 'dompurify'
 // import { JSDOM } from 'jsdom'
@@ -23,6 +24,9 @@ import {
 import Styles from './styles.module.css'
 import HomeStyles from '../../styles/Home.module.css'
 import { utc } from 'moment'
+// import Markdown from 'markdown-to-jsx';
+import HighlightedMarkdown from '../../components/HighlightedMarkdown'
+
 
 class Articles extends React.Component {
 
@@ -58,15 +62,18 @@ class Articles extends React.Component {
 
         </Head>
 
-        <div>
-          these are the articles
+        these are the articles
+
+        <div >
+          
 
           <Image 
             src={this.props.articleMeta[0].cover}
             width={200}
             height={100}
           />
-          
+
+          <HighlightedMarkdown>{this.props.articleMeta[0].markdown}</HighlightedMarkdown>
         </div>
 
 
@@ -83,32 +90,12 @@ export async function getStaticProps(context) {
   const listingPath = path.join('public', 'blog', 'articles', 'config.yaml')
   const yamlListing = await fs.readFile(listingPath, 'utf-8')
   const articleListing = yaml.load(yamlListing).articles
-  // console.log(articleListing)
 
   const articleMeta = []
 
   for (let i = 0; i < articleListing.length; i += 1) {
     const articleId = articleListing[i]
-    const articleFolderPath = path.join('public', 'blog', 'articles', articleId)
-    const articleContentPath = path.join('public', 'blog', 'articles', articleId, 'index.md')
-    const rawArticle = await fs.readFile(articleContentPath, 'utf-8')
-
-    // decided not to use gray-matter because it messes up with cover path
-    const yamlHeader = rawArticle.split('---').filter(el => el !== '')[0]
-    const metadata = yaml.load(yamlHeader)
-    metadata.articleId = articleId
-    
-    // fixing cover URL
-    if (metadata.cover && !metadata.cover.startsWith('http')) {
-      // absolute path from the root (becaus it's in 'public')
-      metadata.cover = path.join('/blog', 'articles', articleId, metadata.cover)
-    }
-
-    // making the date serializable
-    if ('date' in metadata && metadata.date instanceof Date) {
-      metadata.date = metadata.date.toISOString()
-    }
-
+    const metadata = await getArticle(articleId)
     articleMeta.push(metadata)
   }
 

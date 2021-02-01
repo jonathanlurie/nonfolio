@@ -54,7 +54,7 @@ If you are not familiar with it, know that you will quickly pick it up as there 
 - to write text in **bold**, just surround it with `**` before and `**` again after. An alternative syntax is to use a pair of underscores instead of a pair of asterisks (to avoid conflicts when you want to have bold asterisks).
 - to write text in *italic*, just surround it with a single `*` before and `*` again after. An alternative syntax is to use a single underscore instead (to avoid conflicts when you want to have italic asterisks).
 - to create a link to another URL, use `[text of the link](http://example.com)`
-- for an image, it's almost the same but start with an exclamation mark `![alternative text](http://example.com/image.jpg)`. Note that the alternative text is optionnal, you could have it like that `![](http://example.com/image.jpg)` but it's a good practice to have an *alt text* it as it helps people who need audio-description
+- for an image, it's almost the same but start with an exclamation mark `![alternative text](http://example.com/image.jpg)`. Note that the alternative text is optional, you could have it like that `![](http://example.com/image.jpg)` but it's a good practice to have an *alt text* it as it helps people who need audio-description
 - to create a list such as this one, start the line with a dash (`-`)
 - to create a list with numerical index, start each line with a number followed by a dot and a whitespace. Just like that `1. The first item` then on the following line `2. The second item`, etc.
 - to jump line like when you want to create a paragraph, leave a a full blank line. To jump line like you just want to go to next line (but not extra paragraph separation) just finish your line by two whitespace-characters and continue writing on the following line (not fully blank line in between). 
@@ -76,7 +76,11 @@ with a paragraph separation in the middle.
 
 I hope this is helping you getting started!
 
-
+```js
+function main() {
+  const ahah = 'hello'
+}
+```
 
 
 [— @jonathanlurie](https://twitter.com/jonathanlurie)
