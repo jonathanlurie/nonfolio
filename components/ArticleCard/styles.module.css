@@ -1,0 +1,58 @@
+.container {
+  width: 100%;
+  height: 50vh;
+  position: relative;
+  box-shadow: 0.5px 0.5px #e0e0e0, 
+    1px 1px #e0e0e0, 
+    1.5px 1.5px #e0e0e0,
+    2px 2px #e0e0e0,
+    2.5px 2.5px #e0e0e0,
+    3px 3px #e0e0e0,
+    3.5px 3.5px #e0e0e0,
+    4px 4px #e0e0e0,
+    4.5px 4.5px #e0e0e0,
+    5px 5px #e0e0e0,
+    5.5px 5.5px #e0e0e0,
+    6px 6px #e0e0e0,
+    6.5px 6.5px #e0e0e0,
+    7px 7px #e0e0e0,
+    7.5px 7.5px #e0e0e0,
+    8px 8px #e0e0e0,
+    8.5px 8.5px #e0e0e0,
+    9px 9px #e0e0e0,
+    9.5px 9.5px #e0e0e0,
+    10px 10px #e0e0e0;
+}
+
+
+.dark-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+
+.title {
+  position: relative;
+  z-index: 2;
+  font-size: 10vmin;
+  text-align: center;
+  width: 100%;
+  font-weight: 600;
+  color: #fff;
+  text-shadow: 0.5px 0.5px #ffa2d1, 1px 1px #ffa2d1, 1.5px 1.5px #ffa2d1, 2px 2px #ffa2d1, 2.5px 2.5px #ffa2d1, 3px 3px #ffa2d1, 3.5px 3.5px #ffa2d1, 4px 4px #ffa2d1, 4.5px 4.5px #ffa2d1, 5px 5px #ffa2d1, 5.5px 5.5px #ffa2d1, 6px 6px #ffa2d1;
+}
+
+.text-container {
+  position: absolute;
+  width: 100%;
+  height: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}

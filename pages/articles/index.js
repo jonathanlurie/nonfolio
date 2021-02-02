@@ -23,7 +23,7 @@ import {
 } from '@ant-design/icons'
 import Styles from './styles.module.css'
 import HomeStyles from '../../styles/Home.module.css'
-import { utc } from 'moment'
+import ArticleCard from '../../components/ArticleCard'
 // import Markdown from 'markdown-to-jsx';
 import HighlightedMarkdown from '../../components/HighlightedMarkdown'
 
@@ -33,7 +33,7 @@ class Articles extends React.Component {
   constructor(props) {
     super(props)
       
-    console.log(props.articleMeta)
+    console.log(props.articles)
     
 
   }
@@ -66,14 +66,21 @@ class Articles extends React.Component {
 
         <div >
           
+          {
+            this.props.articles.map((article, i) => {
+              return <ArticleCard article={article} key={i}/>
+            })
+          }
 
-          <Image 
-            src={this.props.articleMeta[0].cover}
+          {/* <ArticleCard article={this.props.articles[0]}/> */}
+
+          {/* <Image 
+            src={this.props.articles[0].cover}
             width={200}
             height={100}
-          />
+          /> */}
 
-          <HighlightedMarkdown>{this.props.articleMeta[0].markdown}</HighlightedMarkdown>
+          {/* <HighlightedMarkdown>{this.props.articles[0].markdown}</HighlightedMarkdown> */}
         </div>
 
 
@@ -91,19 +98,17 @@ export async function getStaticProps(context) {
   const yamlListing = await fs.readFile(listingPath, 'utf-8')
   const articleListing = yaml.load(yamlListing).articles
 
-  const articleMeta = []
+  const articles = []
 
   for (let i = 0; i < articleListing.length; i += 1) {
     const articleId = articleListing[i]
-    const metadata = await getArticle(articleId)
-    articleMeta.push(metadata)
+    const article = await getArticle(articleId)
+    articles.push(article)
   }
-
-
 
   return {
     props: {
-      articleMeta
+      articles
     }, // will be passed to the page component as props
   }
 }
