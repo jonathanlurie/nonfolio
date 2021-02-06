@@ -82,5 +82,13 @@ function main() {
 }
 ```
 
+And here is an image stored in the same folder of this article:
+
+![](image.png)
+
+![](https://pro2-bar-s3-cdn-cf6.myportfolio.com/71e8c65f25748779d98a29d068563d77/7346c667-7df8-4d02-8972-1a33e9037c4e.jpg?h=0b509ed2584e75246e08a9b7360f619a)
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d22014.264071554826!2d6.247230494504201!3d46.39352866385494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c430f79b0dd1f%3A0xd69fcc929b443788!2sPrangins!5e0!3m2!1sen!2sch!4v1612635777021!5m2!1sen!2sch" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+
 
 [— @jonathanlurie](https://twitter.com/jonathanlurie)

@@ -16,7 +16,7 @@ export async function getArticle(articleId) {
 
   const rawSplitted = splitFrontMatterFromMarkdown(rawArticle)
   const article = yaml.load(rawSplitted.frontMatter)
-  article.markdown = rawSplitted.markdown
+  article.markdown = markdownReplaceImageURL(rawSplitted.markdown, `/blog/articles/${articleId}/`)
   article.articleId = articleId
   
   // fixing cover URL

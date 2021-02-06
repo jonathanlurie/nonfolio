@@ -9,7 +9,7 @@ import {
 import { parseISO, format } from 'date-fns'
 import Styles from './styles.module.css'
 
-export default class ArticleCard extends React.Component {
+export default class ArticleHeader extends React.Component {
   constructor(props) {
     super(props)
 
@@ -21,7 +21,9 @@ export default class ArticleCard extends React.Component {
     const niceDate = article.date ? format(parseISO(article.date), 'LLLL d, yyyy') : null
 
     return (
-      <Link href={`/articles/${article.articleId}`}><a>
+      
+      
+                
       <div className={Styles['container']}>
 
         <div className={Styles['text-container']}>
@@ -29,7 +31,9 @@ export default class ArticleCard extends React.Component {
             <Col span={24}>
               
               <div className={Styles['title']}>
-                {article.title}
+                
+                  {article.title}
+                
               </div>
               <div className={Styles['date']}>
                 {niceDate}
@@ -38,9 +42,6 @@ export default class ArticleCard extends React.Component {
           </Row>
         </div>
 
-        <div className={Styles['excerpt']}>
-          {article.excerpt}
-        </div>
 
         <div className={Styles['tag-container']}>
             <Space>
@@ -58,7 +59,7 @@ export default class ArticleCard extends React.Component {
             quality={100}
           />
       </div>
-      </a></Link>
+      
     )
   }
 }
