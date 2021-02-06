@@ -62,7 +62,7 @@ class Articles extends React.Component {
 
         </Head>
 
-        these are the articles
+        <span className={Styles['articles-title']}>articles</span>
 
         <div >
           
