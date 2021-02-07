@@ -28,11 +28,14 @@ export default class ArticleCard extends React.Component {
         <Row justify="space-around" align="middle" style={{height: '100%', width: '100%'}}>
             <Col span={24}>
               
-              <div className={Styles['title']}>
-                {article.title}
-              </div>
-              <div className={Styles['date']}>
+            <div className={Styles['date']}>
                 {niceDate}
+              </div>
+              <div className={Styles['title']}>
+                  {article.title}
+              </div>
+              <div className={Styles['subtitle']}>
+                {article.subtitle}
               </div>
             </Col>
           </Row>

@@ -23,7 +23,7 @@
   font-size: 19px;
   font-family: 'Spectral', serif;
   text-align: justify;
-  margin: 25px 0 50px 0;
+  margin: 50px 0 50px 0;
 }
 
 .articles-content code {
@@ -42,10 +42,21 @@
 
 .articles-content * {
   max-width: 100%;
+  margin-bottom: 30px;
 }
 
-.articles-content iframe {
+.articles-content iframe{
   width: 100%;
+  max-height: calc(100vh - 50px);
+}
+
+
+.articles-content img {
+  max-width: 100%;
+  max-height: calc(100vh - 50px);
+  display: list-item;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer {

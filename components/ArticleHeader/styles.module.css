@@ -44,9 +44,22 @@
   color: #fff;
   position: relative;
   text-align: center;
-  font-size: 3vmin;
+  font-size: min(2vmax, 17px);
   font-weight: 300;
   transition: all 0.2s;
+}
+
+
+.subtitle {
+  z-index: 2;
+  color: #fff;
+  position: relative;
+  text-align: center;
+  font-size: min(3vmax, 20px);
+  font-weight: 300;
+  transition: all 0.2s;
+  max-width: 70%;
+  margin: 10px auto;
 }
 
 
