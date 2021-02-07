@@ -90,3 +90,15 @@
 }
 
 
+.arrow-back {
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  margin: 20px;
+  z-index: 2;
+}
+
+.arrow-back a:hover {
+  color: #b5e72b;
+}

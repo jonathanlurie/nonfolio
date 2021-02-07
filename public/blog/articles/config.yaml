@@ -1,6 +1,7 @@
 articles:
-  - article-template
+  # - article-template
   - cape-cod
+  - nyc-bnw
   # - article-one
   # - article-two
   # - article-three

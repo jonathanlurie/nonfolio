@@ -16,10 +16,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Row, Col } from 'antd'
 import {
-  TwitterCircleFilled,
-  GithubFilled,
-  SmileFilled,
-  ReadOutlined,
+  ArrowLeftOutlined
 } from '@ant-design/icons'
 import Styles from './styles.module.css'
 import HomeStyles from '../../../styles/Home.module.css'
@@ -46,17 +43,17 @@ class ArticlesPage extends React.Component {
           <title>Jonathan Lurie</title>
           <link rel="icon" href="/favicon.ico" />
           <meta name="theme-color" content="#4c4c4c"></meta>
-          <meta name="description" content="I build scientific software, mostly for computing things about brains, triangles and pixels."/>
+          <meta name="description" content={article.excerpt}/>
           <meta name="author" content="Jonathan Lurie"/>
-          <meta property="og:title" content="Jonathan Lurie"/>
+          <meta property="og:title" content={article.title}/>
           <meta property="og:url" content="https://jonathanlurie.fr"/>
-          <meta property="og:image" content="https://jonathanlurie.fr/images/myface_mountain.jpg"/>
-          <meta property="og:description" content="I build scientific software, mostly for computing things about brains, triangles and pixels."/>
+          <meta property="og:image" content={article.cover.startsWith('http') ? article.cover : `https://jonathanlurie.fr${article.cover}`}/>
+          <meta property="og:description" content={article.excerpt}/>
           <meta property="og:site_name" content="Jonathan Lurie"/>
           <meta property="og:type" content="profile"/>
-          <meta name="twitter:title" content="Jonathan Lurie"/>
-          <meta name="twitter:description" content="I build scientific software, mostly for computing things about brains, triangles and pixels."/>
-          <meta name="twitter:image" content="https://jonathanlurie.fr/images/myface_mountain.jpg"/>
+          <meta name="twitter:title" content={article.title}/>
+          <meta name="twitter:description" content={article.excerpt}/>
+          <meta name="twitter:image" content={article.cover.startsWith('http') ? article.cover : `https://jonathanlurie.fr${article.cover}`}/>
           <meta name="twitter:card" content="summary_large_image"/>
           <meta name="twitter:site" content="@jonathanlurie"/>
           <meta name="next-head-count" content="17"/>

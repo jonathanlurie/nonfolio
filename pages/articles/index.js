@@ -14,12 +14,9 @@ import { withRouter } from 'next/router'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Tooltip, Space, Button } from 'antd'
+import { Tooltip, Space, Button, Col, Row } from 'antd'
 import {
-  TwitterCircleFilled,
-  GithubFilled,
-  SmileFilled,
-  ReadOutlined,
+  ArrowLeftOutlined,
 } from '@ant-design/icons'
 import Styles from './styles.module.css'
 import HomeStyles from '../../styles/Home.module.css'
@@ -62,7 +59,23 @@ class Articles extends React.Component {
 
         </Head>
 
-        <span className={Styles['articles-title']}>articles</span>
+        <Row>
+        <Col flex="none">
+            <span className={Styles['articles-title']}>articles</span>
+          </Col>
+
+          <Col flex="auto">
+            <div className={Styles['arrow-back']}>
+              <Link href='/'>
+                <a>
+                  <ArrowLeftOutlined />
+                </a>
+              </Link>
+            </div>
+          </Col>
+          
+        </Row>
+        
 
         <div >
           

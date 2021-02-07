@@ -6,6 +6,9 @@ import {
   Col,
   Space,
 } from 'antd'
+import {
+  ArrowLeftOutlined,
+} from '@ant-design/icons'
 import { parseISO, format } from 'date-fns'
 import Styles from './styles.module.css'
 
@@ -25,6 +28,14 @@ export default class ArticleHeader extends React.Component {
       
                 
       <div className={Styles['container']}>
+
+        <div className={Styles['arrow-back']}>
+          <Link href='/articles'>
+            <a>
+              <ArrowLeftOutlined />
+            </a>
+          </Link>
+        </div>
 
         <div className={Styles['text-container']}>
         <Row justify="space-around" align="middle" style={{height: '100%', width: '100%'}}>
