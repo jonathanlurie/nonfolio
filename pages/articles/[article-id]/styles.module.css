@@ -40,9 +40,8 @@
   font-family: 'Roboto', sans-serif;
 }
 
-.articles-content * {
+.articles-content  * {
   max-width: 100%;
-  margin-bottom: 30px;
 }
 
 .articles-content iframe{

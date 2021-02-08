@@ -3,11 +3,35 @@ import Image from 'next/image'
 import Markdown from 'markdown-to-jsx'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/github.css'
+import Styles from './styles.module.css'
 
 
-const LazyImg = ({ children, ...props }) => (
-  <img loading='lazy' {...props}>{children}</img>
-)
+const LazyImg = ({ ...props }) => {
+
+  return (
+    <div className={Styles['image']} style={{marginBottom: 30}}>
+      <img loading='lazy' {...props}></img>
+      <div
+        style={{
+          color: '#868686',
+          fontFamily: "'Roboto', sans-serif",
+          textAlign: 'center'
+        }}
+      >
+        {props.alt}
+      </div>
+    </div>
+  )
+}
+
+
+const DivForP = ({ children, ...props }) => {
+
+  return (
+      <div {...props}>{children}</div>
+  )
+}
+
 
 export default class HighlightedMarkdown extends React.Component {
   constructor(props) {
@@ -26,13 +50,17 @@ export default class HighlightedMarkdown extends React.Component {
 
   render() {
     return (
-      <div ref={this._htmlDivRef}>
+      <div ref={this._htmlDivRef} >
         <Markdown
+          className={Styles['container']}
           options={{
             overrides: {
                 img: {
                     component: LazyImg,
                 },
+                p: { // because we want to 
+                  component: DivForP,
+                }
             },
           }}
         >

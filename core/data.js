@@ -71,7 +71,7 @@ function splitFrontMatterFromMarkdown(rawText) {
 
 
 export function markdownReplaceImageURL (md, prefix) {
-  let mdMod = md.replace(/!\[[a-zA-Z0-9 ]*\]\(\s*(\S*)\s*\)/gm, function(correspondance, p1){
+  let mdMod = md.replace(/!\[[a-zA-Z0-9 :.$=+,&()_%°!"'?\\-]*\]\(\s*(\S*)\s*\)/gm, function(correspondance, p1){
     if (p1.startsWith('http')) {
       return correspondance
     } else {
