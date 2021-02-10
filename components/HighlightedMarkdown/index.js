@@ -1,28 +1,10 @@
 import React from 'react'
 import Image from 'next/image'
 import Markdown from 'markdown-to-jsx'
+import SuperImage from '../SuperImage'
 import hljs from 'highlight.js'
 import 'highlight.js/styles/github.css'
 import Styles from './styles.module.css'
-
-
-const LazyImg = ({ ...props }) => {
-
-  return (
-    <div className={Styles['image']} style={{marginBottom: 30}}>
-      <img loading='lazy' {...props}></img>
-      <div
-        style={{
-          color: '#868686',
-          fontFamily: "'Roboto', sans-serif",
-          textAlign: 'center'
-        }}
-      >
-        {props.alt}
-      </div>
-    </div>
-  )
-}
 
 
 const DivForP = ({ children, ...props }) => {
@@ -56,7 +38,7 @@ export default class HighlightedMarkdown extends React.Component {
           options={{
             overrides: {
                 img: {
-                    component: LazyImg,
+                    component: SuperImage,
                 },
                 p: { // because we want to 
                   component: DivForP,

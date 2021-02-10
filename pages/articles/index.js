@@ -37,7 +37,7 @@ class Articles extends React.Component {
 
   render() {
     return (
-      <div className={HomeStyles['container']}>
+      <div className={Styles['container']}>
         <Head>
           <title>Jonathan Lurie</title>
           <link rel="icon" href="/favicon.ico" />

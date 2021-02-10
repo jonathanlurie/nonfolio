@@ -3,10 +3,7 @@ import { promises as fs } from 'fs'
 import path from 'path'
 import yaml from 'js-yaml'
 import { getArticle } from '../../../core/data' 
-// import matter from 'gray-matter'
-// import Marked from 'marked'
-// import DOMPurify from 'dompurify'
-// import { JSDOM } from 'jsdom'
+
 
 // these imports are for frontend
 import React from 'react'
@@ -14,7 +11,7 @@ import { withRouter } from 'next/router'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Row, Col } from 'antd'
+import { Row, Col, BackTop } from 'antd'
 import {
   ArrowLeftOutlined
 } from '@ant-design/icons'
@@ -39,6 +36,7 @@ class ArticlesPage extends React.Component {
     const article = this.props.article
     return (
       <div className={Styles['container']}>
+
         <Head>
           <title>Jonathan Lurie</title>
           <link rel="icon" href="/favicon.ico" />
@@ -59,6 +57,7 @@ class ArticlesPage extends React.Component {
           <meta name="next-head-count" content="17"/>
 
         </Head>
+        
 
         <ArticleHeader article={article}/>
 
@@ -70,6 +69,7 @@ class ArticlesPage extends React.Component {
           </Col>
 
           <Col xs={22}  sm={20}  md={14}  lg={12} xl={12}>
+            <BackTop />
             <HighlightedMarkdown>{article.markdown}</HighlightedMarkdown>
           </Col>
 
