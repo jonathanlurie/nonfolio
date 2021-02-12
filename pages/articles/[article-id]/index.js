@@ -11,7 +11,7 @@ import { withRouter } from 'next/router'
 import Head from 'next/head'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Row, Col, BackTop } from 'antd'
+import { Row, Col } from 'antd'
 import {
   ArrowLeftOutlined
 } from '@ant-design/icons'
@@ -69,7 +69,6 @@ class ArticlesPage extends React.Component {
           </Col>
 
           <Col xs={22}  sm={20}  md={14}  lg={12} xl={12}>
-            <BackTop />
             <HighlightedMarkdown>{article.markdown}</HighlightedMarkdown>
           </Col>
 
