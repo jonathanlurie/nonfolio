@@ -70,7 +70,17 @@ class ArticlesPage extends React.Component {
 
           <Col xs={22}  sm={20}  md={14}  lg={12} xl={12}>
             <HighlightedMarkdown>{article.markdown}</HighlightedMarkdown>
+
+            <div className={Styles['arrow-back']}>
+              <Link href='/articles'>
+                <a>
+                  <ArrowLeftOutlined /> <span className={Styles['articles-title']}>articles</span>
+                </a>
+              </Link>
+            </div>
           </Col>
+
+          
 
           <Col xs={1}  sm={2}  md={5}  lg={6} xl={6}>
           </Col>
