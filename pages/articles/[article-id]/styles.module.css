@@ -38,6 +38,7 @@
 .articles-content h5,
 .articles-content h6 {
   font-family: 'Roboto', sans-serif;
+  font-weight: 600;
 }
 
 .articles-content  * {

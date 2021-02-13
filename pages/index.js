@@ -35,6 +35,23 @@ class Home extends React.Component {
           <meta name="twitter:site" content="@jonathanlurie"/>
           <meta name="next-head-count" content="17"/>
 
+          {/* Google Analytics */}
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-43603368-1"
+          />
+
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+                    gtag('config', 'UA-43603368-1');
+                `,
+            }}
+          />
+
         </Head>
 
         <div className={Styles['header']}>
