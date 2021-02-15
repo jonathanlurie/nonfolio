@@ -41,6 +41,11 @@
   font-weight: 600;
 }
 
+.articles-content blockquote {
+  border-left: solid 10px #ececec;
+  padding-left: 25px;
+}
+
 .articles-content  * {
   max-width: 100%;
 }

@@ -232,11 +232,6 @@ A l'accueil j'explique la situation, on me dit *« attendez, elle a pris quelqu'
 
 J'ai une demi-heure à tuer chez PE Cadre, y'a des tables, des chaises et une étagère avec plein de revues. Ça tombe bien, je me suis toujours demandé ce qu'il y avait dans *L'Usine nouvelle* ou *Challenges*, j'en attrape un de chaque et me pose. J'ai l'impression de lire la description des boites sur les annonces de l'APEC: *« Projets d'envergures »*, *« Clients grands comptes »*, *« Big Data »* et j'en passe, le tout illustré de graphiques sans échelle et d'images corporate.
 
-<br>
-![Super deal les mecs!](http://jonathanlurie.fr/wp-content/uploads/2015/02/corpo.jpg)
-<center>*« Super deal les mecs! »*</center>
-<br>
-
 Avec ce genre de canard entre les mains, le temps passe vite, et mon rendez-vous arrive!
 
 > *« Alors comme ça, on lit pas les mails jusqu'au bout? »* me dit-elle en souriant.
@@ -251,7 +246,7 @@ Une fois installé, la discussion commence par la description de mon profil et d
 
 Elle s'absente 5 minutes, moi je stresse un peu. C'est vrai ce serait un peu dommage de toucher 0€ d'allocation alors je travaille depuis 4 ans, juste parce qu'on a une micro-entreprise avec laquelle on n'a jamais fait de chiffre!
 
-A son retour, tout sourire
+A son retour, tout sourire  
 > *« Bon, c'est bon en fait! Y'a aucun problème pour le cumul! »* OUF!
 
 Je n'ai réalisé que bien plus tard qu'elle n'avait pas répondu la question *« Comment? »* . La discussion continue, je n'obtiens pas plus de réponse sur des possibles formations juridiques relatives aux droits d'auteurs, et elle pointe du doigt une info pas vraiment étrange:
@@ -311,6 +306,7 @@ Et un matin pendant mes vacances (Le 26 janvier) je la reçois, cette notificati
 Une chose importante à savoir à propos de PE, une surprise n'arrive jamais seule! Le même matin, deux documents m'attendent dans mon *espace*, le stricte nécéssaire pour un bon ascenseur émotionnel!
 
 Rien qu'en voyant l'objet du courrier je savais que c'était pas bon:
+
 > *« Demande de pièces complémentaires »* - Eh oui ENCORE.
 
 Deux documents sont demandés:
