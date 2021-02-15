@@ -26,11 +26,8 @@ class ArticlesPage extends React.Component {
 
   constructor(props) {
     super(props)
-      
-    console.log(props)
-    
-
   }
+
 
   render() {
     const article = this.props.article
@@ -114,8 +111,6 @@ class ArticlesPage extends React.Component {
 
 
 export async function getStaticProps(context) {
-
-  console.log('context', context);
   const articleId = context.params['article-id']
   const article = await getArticle(articleId)
 

@@ -58,6 +58,10 @@
 }
 
 
+.articles-content a {
+  color: #14a5bd;
+}
+
 .footer {
   width: 100%;
   height: 200px;
