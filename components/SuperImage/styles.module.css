@@ -1,0 +1,7 @@
+.reasonable-img {
+  max-width: 100%;
+  max-height: calc(100vh - 50px);
+  display: list-item;
+  margin-left: auto;
+  margin-right: auto;
+}
