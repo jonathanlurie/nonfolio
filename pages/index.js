@@ -82,7 +82,7 @@ class Home extends React.Component {
 
         <div className={Styles['presentation2']}>
           <p>
-            I build scientific software, mostly for computing things about brains, triangles and pixels. <span className={Styles['photo-link']}><a href='https://jonathanlurie.myportfolio.com'> (I also like to take pictures)</a></span>
+            I build scientific software, mostly for computing things about brains, triangles and pixels. <span className={Styles['photo-link']}> (I also like to take pictures)</span>
           </p>
           <Space className={Styles['social-links']}>
             <a href='https://twitter.com/jonathanlurie'>

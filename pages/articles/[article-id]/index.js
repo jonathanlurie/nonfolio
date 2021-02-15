@@ -137,8 +137,6 @@ export async function getStaticPaths() {
   const yamlListing = await fs.readFile(listingPath, 'utf-8')
   const articleListing = yaml.load(yamlListing).articles
 
-  console.log(articleListing)
-
   return {
     paths: articleListing.map(id => {
       return {
