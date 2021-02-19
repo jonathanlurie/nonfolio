@@ -231,13 +231,32 @@ For example, you were given some science homework to do over the weekend, it inv
 
 There are many ways to do that and each method has it's application and computational complexity, resulting in an interpolated signal that was more or less natural and more or less fast to compute. Sometimes we trade quality/reliability for speed.
 
+For the next parts, we assume that the sampling happens on a regular basis. For example every *n* unit of time or *n* unit of distance. We usualy say that the sammpling is *"on a regular grid"*.
+
 ### Nearest neighbors
+This method is the simplest to implement, to understand and it's also the fastet to execute. The name speaks for itself: if you lack a measure, just borrow the nearest from this point in time or space. No averaging, no computing, that's it!  
+Since there is basically no computation, the [nearest neighbor interpolation](https://en.wikipedia.org/wiki/Nearest-neighbor_interpolation) is fastest available, but most of the time, the result is not of great quality. If you want to use this method to enlarge an image, the end result will look very pixelated and not smooth at all.  
 
-### Linear  
+### Linear
+[This method](https://en.wikipedia.org/wiki/Linear_interpolation) is already much better than the nearest neighbor and is still fairly cheap to compute. If you linearly interpolate at a given position in time between two actual measures, it means you draw the affine function that connects the three dots together. For example, if at *t 10 seconds* your speed was 20km/h and at *t 20 seconds* your speed was 30km/h, then the linear interpolation will tell that at *t 15 seconds* your speed was 25km/h*. For this, you only take the measurement before and the one after.  
+For a 1-dimentional signal (such as the record of your speed on bicycle per unit of time), we say *linear* but we can extend this to 2D (bilinear), 3D (trilinear) or more dimensions.
 
-### Cubic  
+### Cubic
+Now things are getting serious, and more greedy to compute. The [cubic interpolation](https://www.paulinternet.nl/?page=bicubic) consists in using the two actual measures before the point of interest and the two actual mesures after. In the previous case (linear) we were drawing a straight line from the measure before to the measure after and we were good to go. But with 4 points, it wont be possible to draw a straight line that crosses the 4 points (I mean, yes, it can happen, but generally speaking, don't count on it!). The solution is to find the third degree polynomia that does that. It's going to look like that:  
+**f(x) = ax³ + bx² + cx + d**  
 
-### Spline  
+For each set of four point, we'll most likely have to find a new polynomia.  
+[This Wikipedia page](https://en.wikipedia.org/wiki/Bicubic_interpolation) is for the *bi*cubic, so it applies for the interpolation of a 2D image, but I think it's actually help to have context.  
+As a result, the cubic (or multidimentional version) will give much smoother results and it's good to keep in mind that most dataset are not naturally following a linear function, so in a way it usually make little sense to interpolate them with a linear function. The cubic interpolation is really taking advantage of a wider surrounding to the point of interest and makes a more "natural" simulation of what could have happened in places where data is missing.
+
+### Spline
+There are plenty of types of different *splines* and they have many usage so for the sake of this example, we will try to keep it short and talk mostly of *cubic splines*. To make it simple, a [spline](https://en.wikipedia.org/wiki/Spline_interpolation) is a piecewise polynomial, usually of low degree (third degree for the cubic splines). "Piecewise" because along a signal, there will be many, one after the other, and "polynomial" to do basically what we have seen before on the cubic interpolation: to create a model of the data that looks as natural as possible.  
+
+A familly of functions, called [*monotonic*](https://en.wikipedia.org/wiki/Monotonic_function) can be applied to splines to then provide what we call a [monotonic cubic interpolation](https://en.wikipedia.org/wiki/Monotone_cubic_interpolation). The concept of *monotonicity* is not trivial but in short, it guarantees that the function never decresases if the first point has a lower value than the last (*first* and *last* points used to build the polynomial). For an interpolation, it essentially means that the curve is going to be far less wavy.
+
+If you are used to the *curve tool* in photoshop, then you have used splines already!
+
+Note: you may want to look up what [bezier curves](https://en.wikipedia.org/wiki/Composite_B%C3%A9zier_curve) and [b-splines](https://en.wikipedia.org/wiki/B-spline)
 
 ### Sparse sample
 Inverse distance weighting, Natural neighbour, heatmap
