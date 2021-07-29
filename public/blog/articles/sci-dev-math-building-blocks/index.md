@@ -70,25 +70,42 @@ This may sound trivial for developers that are well versed with the *functional 
 
 To create some behaviors that depend on a particular input, whether it's a distance, a volume, a number or occurrence per unit of time, you will be much more comfortable if you already know some basics and have an image of their curve in your mind. Among the very useful ones:
 
-- the [affine](https://en.wikipedia.org/wiki/Affine_transformation) (and the linear), a straight line to simulate an increase or decrease in a very predictable fashion. *f(x) = ax + b*
+- the [affine](https://en.wikipedia.org/wiki/Affine_transformation) (and the linear), a straight line to simulate an increase or decrease in a very predictable fashion.  
+*f(x) = ax + b* ↴  
+<iframe src="https://www.desmos.com/calculator/tjoxfm0mes"></iframe>
 
-- the [inverse](https://en.wikipedia.org/wiki/Inverse_function) to create behavior where your output gets closer and closer to zero but never quite cross the zero line. For instance, something that becomes transparent if you get too far. *f(x) = 1 / x*
+- the [inverse](https://en.wikipedia.org/wiki/Inverse_function) to create behavior where your output gets closer and closer to zero but never quite cross the zero line. For instance, something that becomes transparent if you get too far.  
+*f(x) = 1 / x* ↴  
+<iframe src="https://www.desmos.com/calculator/fjuaile7cu"></iframe>
 
-- the [quadratic](https://en.wikipedia.org/wiki/Quadratic_function) to make a value grow tremendously (more than linear). This bell-curve function could be used to simulate the growing size of a blast, or, if you minus it, it could be the trajectory of an apple that you throw in the air. *f(x) = x²*
+- the [quadratic](https://en.wikipedia.org/wiki/Quadratic_function) to make a value grow tremendously (more than linear). This bell-curve function could be used to simulate the growing size of a blast, or, if you minus it, it could be the trajectory of an apple that you throw in the air.  
+*f(x) = x²* ↴  
+<iframe src="https://www.desmos.com/calculator/t2qgg2m0fh"></iframe>
 
-- the [polynomial](https://en.wikipedia.org/wiki/Polynomial) is a generalization of the quadratic, but instead of sticking to degree 2 (*x²*), it can be more. It's good to know this one exists but honestly, I don't use it every day.
 
-- The [logarithm](https://en.wikipedia.org/wiki/Logarithm) assumed of *base 10* unless stated otherwise, the *base 2* is also quite handy. the *log of base a* is made to answer the question: "An arbitrary number is always *a* raised at *the power of something*, what is this *something*?". Now, I know that's a bit vague and also, who cares what power of what is this! So an example, maybe: How many digits in the number 9836012? Well, there is *floor(log10(9836012)) + 1* digits. Note that *log10(9836012)* is about *§.99* and as a comparison, *10^7* is *10000000*. Another example, using *base 2*, to convert a large number of bytes into a readable string [here](https://twitter.com/jonathanlurie/status/1298237099217432579). *f(x) = loga(x)*
+- the [polynomial](https://en.wikipedia.org/wiki/Polynomial) is a generalization of the quadratic, but instead of sticking to degree 2 (*x²*), it can be more. One of the use is to modelize trajectories of objects being thrown.  
+An example of polynomial of degree 2: *f(x) = ax² + bx + c* ↴  
+<iframe src="https://www.desmos.com/calculator/55gzdhsktw"></iframe>
 
-- The [absolute value](https://en.wikipedia.org/wiki/Absolute_value), is basically when you just remove the sign and assume everything is positive. This is handy when you are in [frame of reference](https://en.wikipedia.org/wiki/Frame_of_reference) and want to compute the distance from one point to another. With absolute value, you don't need to care about what point is before or after, you arbitrarily decide of the point to go from and the point to go to and take the absolute distance. *f(x) = |x|*
+- The [logarithm](https://en.wikipedia.org/wiki/Logarithm) assumed of *base 10* unless stated otherwise, the *base 2* is also quite handy. the *log of base a* is made to answer the question: "An arbitrary number is always *a* raised at *the power of something*, what is this *something*?". Now, I know that's a bit vague and also, who cares what power of what is this! So an example, maybe: How many digits in the number 9836012? Well, there is *floor(log10(9836012)) + 1* digits. Note that *log10(9836012)* is about *§.99* and as a comparison, *10^7* is *10000000*. Another example, using *base 2*, to convert a large number of bytes into a readable string [here](https://twitter.com/jonathanlurie/status/1298237099217432579).  
+*f(x) = log(x)* ↴  
+<iframe src="https://www.desmos.com/calculator/ara3vpcesl"></iframe>
+
+- The [absolute value](https://en.wikipedia.org/wiki/Absolute_value), is basically when you just remove the sign and assume everything is positive. This is handy when you are in [frame of reference](https://en.wikipedia.org/wiki/Frame_of_reference) and want to compute the distance from one point to another. With absolute value, you don't need to care about what point is before or after, you arbitrarily decide of the point to go from and the point to go to and take the absolute distance.  
+*f(x) = |x|* ↴  
+<iframe src="https://www.desmos.com/calculator/hdbwsqxars"></iframe>
 
 That's all for the basics, and then you can combine all of them to get one you need! Whenever I am facing a situation where I know I will have to find a mathematical function to get the right behavior, the first thing I have in mind is usually the shape of the curve I need to create. Then, from that, and using the building blocks above, I approximate. This process usually takes a plotter such as *Grapher* (preinstall on all Mac computers) and there are also many online alternatives. Just type "function plotter" on Google, or better: build your own!
 
 I have noticed that, over the years, a type of function I was using a lot are with [asymptotic behavior](https://en.wikipedia.org/wiki/Asymptotic_analysis?), which is when the input grows, the output grows as well but less and less and eventually become considered constant. Two functions I like, again, these are building block so twist them as you feel, are:
 
-- the [sigmoid](https://en.wikipedia.org/wiki/Sigmoid_function), with this symmetric S-shape and asymptotic behavior on both ends (which is not that common). I recently used this one in the brain atlas to make the meshes progressively transparent as the camera is getting closer. *f(x) = 1 / (1 + exp(-x))*
+- the [sigmoid](https://en.wikipedia.org/wiki/Sigmoid_function), with this symmetric S-shape and asymptotic behavior on both ends (which is not that common). I recently used this one in the brain atlas to make the meshes progressively transparent as the camera is getting closer.  
+*f(x) = 1 / (1 + exp(-x))* ↴  
+<iframe src="https://www.desmos.com/calculator/hlvmvhtikm"></iframe>
 
-- the *i-am-not-aware-it-has-a-name one*, but this one is mostly a tweaked inverse function, very handy to grow something rather naturally between 0 and 1, not to slow not too fast. To be used on R+ (aka. positive numbers). *f(x) = 1 / (x + 1)*
+- the *i-am-not-aware-it-has-a-name one*, but this one is mostly a tweaked inverse function, very handy to grow something rather naturally between 0 and 1, not to slow not too fast. To be used on R+ (aka. positive numbers).  
+*f(x) = 1 + (-1 / (x + 1))* ↴  
+<iframe src="https://www.desmos.com/calculator/0dhnjcq6w0"></iframe>
 
 This list could grow exponentially based on the number of developers contributing to it (ok, maybe not exponentially), but that's already a good start. 
 
